@@ -1,0 +1,21 @@
+{
+  "name": "graphTreesBinaryTrees",
+  "version": "1.0.0",
+  "main": "graphs.js",
+  "repository": "https://github.com/jdlawrence/graphsTreesBinaryTrees.git",
+  "author": "Jamil Lawrence <jamil.lawrence@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "parcel-bundler": "^1.11.0"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  }
+}
