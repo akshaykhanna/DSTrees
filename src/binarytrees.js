@@ -42,6 +42,16 @@ class BinaryTree {
     this.right && this.right.postOrderTraversal(func);
     func(this);
   }
+
+  levelOrderTraversal(func = console.log) {
+    const queue = [this];
+    while(queue.length > 0) {
+        const currentTree = queue.shift();
+        func(currentTree)
+        currentTree.left && queue.push(currentTree.left);
+        currentTree.right && queue.push(currentTree.right);
+    }
+  }
 }
 
 export default BinaryTree;
