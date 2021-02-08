@@ -23,8 +23,8 @@ describe('the insert function', () => {
 
   test('the child should be a Node instance', () => {
     binarySearchTree.insert(2);
+    console.log('binarySearchTree: ', binarySearchTree);
     binarySearchTree.insert(4);
-
     expect(binarySearchTree.root.right).toBeInstanceOf(Node);
   });
 
@@ -82,12 +82,11 @@ describe('the min function', () => {
   });
 
   test('should be a function', () => {
-    expect(typeof binarySearchTree.min).toBe('function');
+    expect(typeof BinarySearchTree.min).toBe('function');
   });
-
   test('should return the node containing the minimum value', () => {
-    expect(binarySearchTree.min(binarySearchTree.root)).toEqual(new Node(1));
-    expect(binarySearchTree.min(binarySearchTree.root.right)).toEqual(new Node(5));
+    expect(BinarySearchTree.min(binarySearchTree.root)).toEqual(new Node(1));
+    expect(BinarySearchTree.min(binarySearchTree.root.right)).toEqual(new Node(5));
   });
 });
 
@@ -103,12 +102,12 @@ describe('the max function', () => {
   });
 
   test('should be a function', () => {
-    expect(typeof binarySearchTree.max).toBe('function');
+    expect(typeof BinarySearchTree.max).toBe('function');
   });
 
   test('should return the node containing the maximum value', () => {
-    expect(binarySearchTree.max(binarySearchTree.root)).toEqual(new Node(7));
-    expect(binarySearchTree.max(binarySearchTree.root.left)).toEqual(new Node(3));
+    expect(BinarySearchTree.max(binarySearchTree.root)).toEqual(new Node(7));
+    expect(BinarySearchTree.max(binarySearchTree.root.left)).toEqual(new Node(3));
   });
 });
 
